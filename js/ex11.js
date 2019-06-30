@@ -9,4 +9,4 @@ do {
     alert("Solo cuando sea diferente a 20");
 
     years --;
-} while(years < 25);
+} while(years > 25);
