@@ -20,3 +20,6 @@
         contador++;
     }
  }while(numero >= 0);
+
+ alert(`La suma de todos los numeros es: ${suma}`);
+ alert(`La media de todos los numeros es: ${suma / contador}`);
