@@ -18,10 +18,10 @@ function claculadora(n1, n2, mostrar = false) {
     }
     else {
         
-        document.write("Suma: " + (n1 + n2));
-        document.write("Resta: " + (n1 - n2));
-        document.write("Multiplicacion: " + (n1 * n2));
-        document.write("Division: " +( n1 / n2));
+        document.write("Suma: " + (n1 + n2) + "<br />");
+        document.write("Resta: " + (n1 - n2) + "<br />");
+        document.write("Multiplicacion: " + (n1 * n2) + "<br />");
+        document.write("Division: " +( n1 / n2) + "<br />");
         document.write("***********************");
     }
 }
