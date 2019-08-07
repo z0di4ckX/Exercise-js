@@ -6,6 +6,8 @@ function cambiaColor(color) {
     cajas.style.background = color;
 }
 
+// Conseguir elementos con un ID concreto
+
 // var cajas = document.getElementById("miCajas");
 var cajas = document.querySelector("#miCajas");
 
@@ -16,4 +18,27 @@ cajas.style.padding = "20px";
 cajas.style.color = "white";
 cajas.className = "hola";
 
-console.log(cajas);
+// Conseguir elementos por su etiqueta
+var todosLosDiv = document.getElementsByTagName('div');
+
+// var contenidoTexto = todosLosDiv[2];
+// contenidoTexto.innerHTML = "Otro texto para el segundo elemento";
+
+// console.log(contenidoTexto);
+
+var seccion = document.querySelector("#miseccion");
+var hr = document.createElement("hr");
+
+var valor;
+for(valor in todosLosDiv) {
+    if(typeof todosLosDiv[valor].textContent == "string") {
+        var parrafo = document.createElement("p");
+        var texto = document.createTextNode(todosLosDiv[valor].textContent);
+        parrafo.append(texto);
+        seccion.append(parrafo);
+    }
+}
+
+seccion.append(hr);
+// Conseguir elementos por su clases css
+
