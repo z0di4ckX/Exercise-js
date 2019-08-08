@@ -42,3 +42,14 @@ for(valor in todosLosDiv) {
 seccion.append(hr);
 // Conseguir elementos por su clases css
 
+var divsRojos = document.getElementsByClassName('rojo');
+
+var div;
+for(div in divsRojos) {
+    
+    if(divsRojos[div].className == "rojo") {
+
+        divsRojos[div].style.background = "red";
+    
+    }
+}
