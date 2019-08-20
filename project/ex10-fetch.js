@@ -2,12 +2,18 @@
 
 // Fetch (ajax) y pediciones a un servidor / apis rest
 var div_usuarios = document.querySelector("#usuarios");
+var div_profesor = document.querySelector("#profesor");
 var div_janet = document.querySelector("#janet");
 
 getUsuarios()
     .then(data => data.json())
     .then(users => {
         listadoUsuarios(users.data);
+
+        return getInfo();
+    })
+    .then(data => {
+        div_profesor.innerHTML = data;
 
         return getJanet();
     })
@@ -22,6 +28,28 @@ getUsuarios()
 
     function getJanet() {
         return fetch('https://reqres.in/api/users/2');
+    }
+
+    function getInfo() {
+        
+        var profesor = {
+            nombre: 'Victor',
+            apellido: 'Robles',
+            url: 'http://victorroblesweb.es'
+        };
+
+        return new Promise( ( resolve, reject ) => {
+            var profesorString = '';
+            
+            setTimeout(() => {
+                profesorString = JSON.stringify(profesor);
+                
+                if(typeof profesorString != 'string') return reject('err');
+    
+                return resolve(profesorString);
+                
+            }, 3000);
+        });
     }
 
     const listadoUsuarios = ( usuarios ) => {
