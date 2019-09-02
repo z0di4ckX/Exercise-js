@@ -11,3 +11,4 @@ var textHoras = `The year is: ${year}
                  The hours is: ${hora}`;
 
 console.log(textHoras);
+console.log(Math.ceil(Math.random() * 10000));
