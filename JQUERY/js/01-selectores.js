@@ -29,4 +29,15 @@ $(document).ready(function() {
             that.removeClass('grande');
         }
     });
+
+    // Selection de atributos
+    $('[title="Google"]').css('background', '#ccc');
+    $('[title="Facebook"]').css('background', 'blue');
+
+    // Otros
+    // $('p, a').addClass('margen-superior');
+
+    var busqueda = $("#caja").find('.resaltado');
+
+    console.log(busqueda);
 });
