@@ -20,4 +20,15 @@ $(document).ready(function() {
         $(this).css("background", "green");
     }
     caja.hover(cambiaRojo, cambiaVerde);
+
+    // click, double click
+    caja.click(function() {
+        $(this).css("background", "blue")
+               .css("color", "white");
+    });
+
+    caja.dblclick(function() {
+        $(this).css("background", "pink")
+               .css("color", "yellow");
+    });
 });
